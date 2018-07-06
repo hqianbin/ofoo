@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_white">
+
+    <Button
+        android:id="@+id/btn_use_bike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimens_20dp"
+        android:background="@drawable/ridenow"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:text="@string/use_bike"
+        android:textSize="18sp"
+        android:textColor="@android:color/holo_orange_light"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:background="@drawable/shape_bg_white_corner_stroke_lightblack"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bicycle_signal"/>
+
+        <TextView
+            android:id="@+id/tv_bike_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_20dp"
+            android:paddingLeft="@dimen/dimens_15dp"
+            android:paddingRight="@dimen/dimens_15dp"
+            android:paddingTop="@dimen/dimens_5dp"
+            android:paddingBottom="@dimen/dimens_5dp"
+            android:gravity="center"
+            android:background="@drawable/shape_bg_lightblack"
+            android:text="车牌号：----"
+            android:textSize="@dimen/text_size_15sp"
+            android:textColor="@color/common_dark_black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_30dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edt_bike_pass"
+                android:layout_width="@dimen/dimens_200dp"
+                android:layout_height="@dimen/dimens_60dp"
+                android:maxLength="4"
+                android:inputType="number"
+                android:gravity="center"
+                android:typeface="serif"
+                android:textSize="25sp"
+                android:background="@drawable/shape_bg_white_stroke_yellow"/>
+
+            <Button
+                android:id="@+id/btn_bike_insert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:layout_marginLeft="@dimen/dimens_15dp"
+                android:background="@drawable/select_btn_enter"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_20dp"
+            android:layout_marginBottom="@dimen/dimens_20dp"
+            android:gravity="center"
+            android:text="输入密码，下次使用"
+            android:textColor="@color/common_dark_black"/>
+
+    </LinearLayout>
+</RelativeLayout>

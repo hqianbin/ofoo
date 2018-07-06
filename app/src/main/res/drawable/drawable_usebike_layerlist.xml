@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/abc_btn_switch_to_on_mtrl_00012"
+        android:left="0dp"
+        android:top="0dp">
+    </item>
+
+    <item
+        android:drawable="@drawable/abc_scrubber_control_to_pressed_mtrl_005"
+        android:left="0dp"
+        android:top="0dp">
+    </item>
+</layer-list>

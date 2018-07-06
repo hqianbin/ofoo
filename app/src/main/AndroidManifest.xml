@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.ofoo" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:name=".app.OfooApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+
+        <provider android:name=".provider.TinkerLogProvider"
+            android:authorities="com.android.ofoo.provider.userpatchinfo"
+            android:multiprocess="false">
+        </provider>
+
+        <service android:name=".service.FloatingService" />
+        <receiver android:name=".provider.OfooAppWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/appwidget_provider" />
+        </receiver>
+
+        <service
+            android:name=".service.SampleResultService"
+            android:exported="false"/>
+
+        <service
+            android:name=".service.UpdateCheckService"
+            android:exported="false"/>
+
+        <service
+            android:name=".service.DownloadService"
+            android:exported="false"/>
+
+        <activity
+            android:name=".activities.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.BikeQueryActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.BikeQueryAllActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.BikeInsertActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.TestActivity"
+            android:screenOrientation="portrait"/>
+
+        <meta-data
+            android:name="APP_CHANNEL"
+            android:value="${CHANNEL_VALUE}" /> <!-- 渠道 -->
+    </application>
+
+</manifest>

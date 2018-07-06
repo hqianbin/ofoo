@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ofoo</string>
+    <string name="use_bike">立即用车</string>
+
+    <string name="tv_bike_pass">车牌号%1$s的解锁码：%2$s</string>
+    <string name="tv_bike_no">车牌号：%1$s</string>
+</resources>
